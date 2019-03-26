@@ -64,6 +64,8 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="no" active="no"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
@@ -2749,7 +2751,7 @@ Phone Connectors&lt;br&gt;
 Cinch Connectors&lt;br&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="SPC4077" urn="urn:adsk.eagle:footprint:7488/1" library_version="1">
+<package name="SPC4077" urn="urn:adsk.eagle:footprint:7488/1" locally_modified="yes" library_version="1" library_locally_modified="yes">
 <description>&lt;b&gt;DC POWER JACK 2mm&lt;/b&gt;&lt;br&gt; Right Angle, Through Hole, Rated 5A at 16VDC, PC Terminals&lt;p&gt;
 Source: www.spctechnology.com .. 84N1161.pdf&lt;br&gt;
 Distributor: &lt;b&gt;Farnell (www.Farnell.de)&lt;/b&gt;&lt;br&gt;
@@ -2774,9 +2776,7 @@ Created by Robert Siegler</description>
 <wire x1="2.75" y1="-4" x2="2.75" y2="4" width="0.1" layer="51"/>
 <wire x1="-10.75" y1="3.2" x2="-1.75" y2="3.2" width="0.1" layer="21" style="shortdash"/>
 <wire x1="-10.75" y1="-3.2" x2="-1.75" y2="-3.2" width="0.1" layer="21" style="shortdash"/>
-<wire x1="-1.75" y1="-3.2" x2="-1.75" y2="-1" width="0.1" layer="21" style="shortdash"/>
-<wire x1="-1.75" y1="-1" x2="-1.75" y2="1" width="0.1" layer="21" style="shortdash"/>
-<wire x1="-1.75" y1="1" x2="-1.75" y2="3.2" width="0.1" layer="21" style="shortdash"/>
+<wire x1="-1.75" y1="-3.2" x2="-1.75" y2="3.2" width="0.1" layer="21" style="shortdash"/>
 <wire x1="-8.75" y1="-1" x2="-1.75" y2="-1" width="0.1" layer="51" style="shortdash"/>
 <wire x1="-8.75" y1="1" x2="-1.75" y2="1" width="0.1" layer="51" style="shortdash"/>
 <wire x1="-8.75" y1="-1" x2="-8.75" y2="1" width="0.1" layer="21" curve="-180"/>
@@ -2799,9 +2799,9 @@ Created by Robert Siegler</description>
 <wire x1="1.25" y1="-2.73" x2="1.25" y2="4" width="0.1" layer="21"/>
 <wire x1="2.75" y1="2.35" x2="2.75" y2="4" width="0.1" layer="21"/>
 <wire x1="2.75" y1="-4" x2="2.75" y2="-2.35" width="0.1" layer="21"/>
-<pad name="2" x="0" y="-4.8" drill="0.8" diameter="2.1844" shape="long"/>
-<pad name="1" x="-3" y="0" drill="0.8" diameter="2.1844" shape="long" rot="R90"/>
-<pad name="3" x="3" y="0" drill="1" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="2" x="0" y="-4.8" drill="0.8" diameter="2.286" shape="long"/>
+<pad name="1" x="-3" y="0" drill="0.8" diameter="2.286" shape="long" rot="R90"/>
+<pad name="3" x="3" y="0" drill="1" diameter="2.286" shape="long" rot="R90"/>
 <text x="-10.16" y="5.08" size="1.27" layer="25">&gt;NAME</text>
 <text x="-10.16" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-1.25" y1="-5.05" x2="1.25" y2="-4.55" layer="51"/>
@@ -2861,6 +2861,43 @@ Created by Robert Siegler</description>
 <description>THROUGH-HOLE PAD</description>
 </package3d>
 </packages3d>
+</library>
+<library name="SparkFun-Fuses">
+<description>&lt;h3&gt;SparkFun Fuses&lt;/h3&gt;
+In this library you'll find fuses, or fuse like components such as PTCs. Reference designator F.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="0805">
+<description>&lt;p&gt;&lt;b&gt;Generic 2012 (0805) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.2" layer="1"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.2" layer="1"/>
+<text x="0" y="0.889" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.889" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="-1.5" y1="0.8" x2="1.5" y2="0.8" width="0.0508" layer="39"/>
+<wire x1="1.5" y1="0.8" x2="1.5" y2="-0.8" width="0.0508" layer="39"/>
+<wire x1="1.5" y1="-0.8" x2="-1.5" y2="-0.8" width="0.0508" layer="39"/>
+<wire x1="-1.5" y1="-0.8" x2="-1.5" y2="0.8" width="0.0508" layer="39"/>
+<wire x1="1.397" y1="0.762" x2="-1.397" y2="0.762" width="0.1016" layer="21"/>
+<wire x1="-1.397" y1="0.762" x2="-1.397" y2="-0.762" width="0.1016" layer="21"/>
+<wire x1="-1.397" y1="-0.762" x2="1.397" y2="-0.762" width="0.1016" layer="21"/>
+<wire x1="1.397" y1="-0.762" x2="1.397" y2="0.762" width="0.1016" layer="21"/>
+<wire x1="-0.381" y1="0" x2="0" y2="0" width="0.0762" layer="21" curve="-180"/>
+<wire x1="0.381" y1="0" x2="0" y2="0" width="0.0762" layer="21" curve="-180"/>
+<wire x1="-0.381" y1="0" x2="-0.508" y2="0" width="0.0762" layer="21"/>
+<wire x1="0.381" y1="0" x2="0.508" y2="0" width="0.0762" layer="21"/>
+</package>
+</packages>
 </library>
 </libraries>
 <attributes>
@@ -3113,12 +3150,24 @@ design rules under a new name.</description>
 <element name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="10k" x="6.985" y="6.096" rot="R270">
 <attribute name="SPICEPREFIX" value="R" x="6.985" y="6.096" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
+<element name="FB" library="SparkFun-Fuses" package="0805" value="2A" x="43.815" y="36.449" rot="MR90">
+<attribute name="PROD_ID" value="13945" x="43.815" y="36.449" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="FR" library="SparkFun-Fuses" package="0805" value="2A" x="41.275" y="36.449" rot="MR90">
+<attribute name="PROD_ID" value="13945" x="41.275" y="36.449" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="FG" library="SparkFun-Fuses" package="0805" value="2A" x="38.735" y="36.449" rot="MR90">
+<attribute name="PROD_ID" value="13945" x="38.735" y="36.449" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="F-IN" library="SparkFun-Fuses" package="0805" value="6.5A" x="32.131" y="36.576" rot="MR90">
+<attribute name="PROD_ID" value="13945" x="32.131" y="36.576" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="RO" class="2">
 <contactref element="SV1" pad="2"/>
-<contactref element="Q2" pad="P3"/>
-<wire x1="41.275" y1="33.175446875" x2="41.275" y2="39.624" width="1.016" layer="16"/>
+<contactref element="FR" pad="2"/>
+<wire x1="41.275" y1="37.349" x2="41.275" y2="39.624" width="1.016" layer="16"/>
 </signal>
 <signal name="GND" class="1">
 <contactref element="R3" pad="2"/>
@@ -3271,18 +3320,13 @@ design rules under a new name.</description>
 </signal>
 <signal name="GO" class="2">
 <contactref element="SV1" pad="3"/>
-<contactref element="Q3" pad="P3"/>
-<wire x1="36.195" y1="33.302446875" x2="36.195" y2="34.417" width="1.016" layer="16"/>
-<wire x1="36.195" y1="34.417" x2="36.8935" y2="35.1155" width="1.016" layer="16"/>
-<wire x1="36.8935" y1="35.1155" x2="36.905175" y2="35.1155" width="1.016" layer="16"/>
-<wire x1="36.905175" y1="35.1155" x2="38.735" y2="36.945325" width="1.016" layer="16"/>
-<wire x1="38.735" y1="36.945325" x2="38.735" y2="39.624" width="1.016" layer="16"/>
+<contactref element="FG" pad="2"/>
+<wire x1="38.735" y1="37.349" x2="38.735" y2="39.624" width="1.016" layer="16"/>
 </signal>
 <signal name="BO" class="2">
 <contactref element="SV1" pad="1"/>
-<contactref element="Q1" pad="P3"/>
-<wire x1="43.815" y1="39.624" x2="43.815" y2="35.080446875" width="1.016" layer="16"/>
-<wire x1="43.815" y1="35.080446875" x2="45.72" y2="33.175446875" width="1.016" layer="16"/>
+<contactref element="FB" pad="2"/>
+<wire x1="43.815" y1="37.349" x2="43.815" y2="39.624" width="1.016" layer="16"/>
 </signal>
 <signal name="+3V3">
 <contactref element="IC2" pad="2"/>
@@ -3435,15 +3479,16 @@ design rules under a new name.</description>
 <wire x1="35.052" y1="26.67" x2="37.144959375" y2="28.762959375" width="1.016" layer="16"/>
 </signal>
 <signal name="N$1">
-<contactref element="J1" pad="3"/>
 <contactref element="SW1" pad="1"/>
 <wire x1="46.101" y1="36.83" x2="46.228" y2="36.703" width="1.016" layer="16"/>
-<wire x1="29.591" y1="33.957" x2="34.2646" y2="38.6306" width="1.524" layer="16"/>
 <wire x1="34.2646" y1="38.6306" x2="34.2646" y2="41.1856" width="1.524" layer="16"/>
 <wire x1="45.212" y1="43.18" x2="46.101" y2="42.291" width="1.524" layer="16"/>
 <wire x1="46.101" y1="42.291" x2="46.101" y2="36.83" width="1.524" layer="16"/>
 <wire x1="34.2646" y1="41.1856" x2="36.259" y2="43.18" width="1.524" layer="16"/>
 <wire x1="36.259" y1="43.18" x2="45.212" y2="43.18" width="1.524" layer="16"/>
+<contactref element="F-IN" pad="2"/>
+<wire x1="32.131" y1="37.476" x2="33.11" y2="37.476" width="1.524" layer="16"/>
+<wire x1="33.11" y1="37.476" x2="34.2646" y2="38.6306" width="1.524" layer="16"/>
 </signal>
 <signal name="GPIO15">
 <contactref element="U$3" pad="GPIO15"/>
@@ -3451,6 +3496,30 @@ design rules under a new name.</description>
 <wire x1="10.0965" y1="7.747" x2="8.255" y2="7.747" width="0.8128" layer="16"/>
 <wire x1="8.255" y1="7.747" x2="6.985" y2="9.017" width="0.8128" layer="16"/>
 <wire x1="6.985" y1="9.017" x2="6.985" y2="9.906" width="0.8128" layer="16"/>
+</signal>
+<signal name="BOFUSE" class="2">
+<contactref element="Q1" pad="P3"/>
+<contactref element="FB" pad="1"/>
+<wire x1="43.815" y1="35.549" x2="43.815" y2="35.080446875" width="1.016" layer="16"/>
+<wire x1="43.815" y1="35.080446875" x2="45.72" y2="33.175446875" width="1.016" layer="16"/>
+</signal>
+<signal name="GOFUSE" class="2">
+<contactref element="Q3" pad="P3"/>
+<contactref element="FG" pad="1"/>
+<wire x1="38.735" y1="35.549" x2="36.488446875" y2="33.302446875" width="1.016" layer="16"/>
+<wire x1="36.488446875" y1="33.302446875" x2="36.195" y2="33.302446875" width="1.016" layer="16"/>
+</signal>
+<signal name="ROFUSE" class="2">
+<contactref element="Q2" pad="P3"/>
+<contactref element="FR" pad="1"/>
+<wire x1="41.275" y1="35.549" x2="41.275" y2="33.175446875" width="1.016" layer="16"/>
+</signal>
+<signal name="N$2">
+<contactref element="J1" pad="3"/>
+<contactref element="F-IN" pad="1"/>
+<wire x1="31.7555" y1="35.3005" x2="32.131" y2="35.676" width="1.016" layer="16"/>
+<wire x1="29.591" y1="33.957" x2="30.412" y2="33.957" width="1.524" layer="16"/>
+<wire x1="30.412" y1="33.957" x2="31.7555" y2="35.3005" width="1.524" layer="16"/>
 </signal>
 </signals>
 <errors>
